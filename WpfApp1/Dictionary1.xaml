@@ -1,0 +1,41 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:local="clr-namespace:WpfApp1"
+                    >
+    <Style x:Key="valve" TargetType="{x:Type local:HcMultiIndicator}" >
+        <Setter Property="StatImages">
+            <Setter.Value>
+
+
+                <local:cStatImages>
+
+                    <BitmapImage UriSource="/valve_01h_cls.bmp"/>
+                    <BitmapImage UriSource="/valve_01h_opn.bmp"/>
+
+                </local:cStatImages>
+
+
+            </Setter.Value>
+        </Setter>
+
+    </Style>
+
+    <Style x:Key="pump" TargetType="{x:Type local:HcMultiIndicator}" >
+        <Setter Property="StatImages">
+            <Setter.Value>
+
+
+                <local:cStatImages>
+                    <BitmapImage UriSource="/v_pump_01h_flt.bmp"/>
+                    <BitmapImage UriSource="/v_pump_01h_rdy.bmp"/>
+                    <BitmapImage UriSource="/v_pump_01h_stb.bmp"/>
+                </local:cStatImages>
+
+
+            </Setter.Value>
+        </Setter>
+
+    </Style>
+
+
+</ResourceDictionary>

@@ -1,0 +1,47 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="green_close.png" />
+    <None Remove="green_open.bmp" />
+    <None Remove="valve_01v_flt_opn.bmp" />
+    <None Remove="valve_04h_cls.bmp" />
+    <None Remove="v_pump_01h_rdy.bmp" />
+    <None Remove="v_pump_01h_stb.bmp" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="green_close.png" />
+    <Resource Include="green_open.bmp" />
+    <Resource Include="valve_01v_flt_opn.bmp" />
+    <Resource Include="valve_04h_cls.bmp" />
+    <Resource Include="v_pump_01h_rdy.bmp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <EmbeddedResource Include="v_pump_01h_stb.bmp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="valve_01h_cls.bmp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="valve_01h_flt_cls.bmp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="valve_01h_flt_opn.bmp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="valve_01h_opn.bmp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+</Project>

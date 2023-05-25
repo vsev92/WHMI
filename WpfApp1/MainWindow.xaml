@@ -1,0 +1,56 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp1"
+        xmlns:HControls="clr-namespace:WHMI.HControls;assembly=WHMI" x:Class="WpfApp1.MainWindow"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+
+    <Window.Resources>
+
+        <Style x:Key="valve" TargetType="{x:Type local:HcMultiIndicator}" >
+            <Setter Property="StatImages">
+                <Setter.Value>
+
+
+                    <local:cStatImages>
+
+                        <BitmapImage UriSource="/valve_01h_cls.bmp"/>
+                        <BitmapImage UriSource="/valve_01h_opn.bmp"/>
+
+                    </local:cStatImages>
+
+
+                </Setter.Value>
+            </Setter>
+
+        </Style>
+
+        <Style x:Key="pump" TargetType="{x:Type local:HcMultiIndicator}" >
+            <Setter Property="StatImages">
+                <Setter.Value>
+
+
+                    <local:cStatImages>
+                        <BitmapImage UriSource="/v_pump_01h_flt.bmp"/>
+                        <BitmapImage UriSource="/v_pump_01h_rdy.bmp"/>
+                        <BitmapImage UriSource="/v_pump_01h_stb.bmp"/>
+                    </local:cStatImages>
+
+
+                </Setter.Value>
+            </Setter>
+
+        </Style>
+
+    </Window.Resources>
+    <Grid>
+        <local:HcMultiIndicator Style="{StaticResource pump}" HorizontalAlignment="Left" Height="100" Margin="121,221,0,0" VerticalAlignment="Top" Width="100" IndicatorStat="1"/>
+        <local:HcMultiIndicator Style="{StaticResource valve}" HorizontalAlignment="Left" Height="100" Margin="528,258,0,0" VerticalAlignment="Top" Width="100"/>
+
+
+
+    </Grid>
+</Window>
